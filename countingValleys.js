@@ -2,7 +2,7 @@ const steps = 10;
 
 const path = "DUUDUDUDDU";
 
-function countingValleys(steps, path) {
+const countingValleys = (steps, path) => {
     // Write your code here
     const min = 2;
     const max = 1000000;
