@@ -3,15 +3,15 @@ const inventoryList = () => {
     // let items = [];
     const add = (val) => {
         const filterItem = items.includes(val);
-        if(items.length === 0 || !filterItem){
+        if (!val){
+            console.log("No Items");
+        } else if(items.length === 0 || !filterItem){
             items.push(val);
             console.log(items, "added item");
             console.log(filterItem);
             return items;
         } else if (filterItem){
             console.log(`${val} names already added!`);
-        } else {
-            console.log("added error!");
         }
     }
     const remove = (val) => {
@@ -33,7 +33,7 @@ const inventoryList = () => {
 }
 
 const obj = inventoryList();
-const operationCount = 0;
+const operationCount = 1;
 
 for(let i = 0; i <= operationCount; i++){
     const operationInfo = ["add", "Trouser"];
@@ -50,4 +50,3 @@ for(let i = 0; i <= operationCount; i++){
         }
     }
 }
-obj;
