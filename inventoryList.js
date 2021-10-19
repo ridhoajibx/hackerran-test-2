@@ -3,26 +3,17 @@ const inventoryList = () => {
     // let items = [];
     const add = (val) => {
         const filterItem = items.includes(val);
-        if (!val){
-            console.log("No Items");
-        } else if(items.length === 0 || !filterItem){
+        if (!filterItem){
             items.push(val);
-            console.log(items, "added item");
-            console.log(filterItem);
             return items;
-        } else if (filterItem){
+        } else {
             console.log(`${val} names already added!`);
         }
     }
     const remove = (val) => {
         const filterItem = items.includes(val);
-        if(items.length > 0 && filterItem){
-            items = items.filter(item => item !== val)
-            console.log(items, "remove item")
-            console.log(filterItem)
-            return items;
-        } else {
-            console.log("No Items");
+        if(filterItem){
+            return items = items.filter(item => item !== val)
         }
     }
     const getList = () => {
